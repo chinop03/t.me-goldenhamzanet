@@ -13,9 +13,9 @@
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "servicename": "n4-grpc"
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "n4-grpc"
         }
       }
     }
