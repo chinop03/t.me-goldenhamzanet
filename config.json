@@ -17,7 +17,7 @@
         "network": "ws",
         "security": "none",
         "wsSettings": {
-          "path": "/S7",
+          "path": "/t.me/goldenhamzanet",
           "headers": {
             "Host": "cdn.cloudflare.com"
           }
