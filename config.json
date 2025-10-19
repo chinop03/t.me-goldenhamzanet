@@ -1,77 +1,29 @@
 {
-  "log": { "loglevel": "warning" },
-
   "inbounds": [
     {
       "port": 8080,
-      "protocol": "trojan",
+      "protocol": "grpc",
       "settings": {
         "clients": [
           {
-            "password": "t.me/goldenhamzanet",
+            "id": "b1bf281d-5742-4778-ac48-7d89635b2165",
             "level": 0
           }
-        ]
+        ],
+        "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
-        "security": "none",
         "wsSettings": {
-          "path": "/t.me/goldenhamzanet",
-          "headers": {
-            "Host": "cdn.cloudflare.com"
-          }
+          "servicename": "n4-grpc"
         }
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls", "quic"]
       }
     }
   ],
-
   "outbounds": [
     {
       "protocol": "freedom",
-      "settings": {},
-      "streamSettings": {
-        "sockopt": {
-          "mark": 255,
-          "tcpFastOpen": true,
-          "tcpKeepAliveIdle": 30,
-          "tcpKeepAliveInterval": 10
-        }
-      }
-    },
-    {
-      "protocol": "blackhole",
-      "tag": "blocked",
       "settings": {}
     }
-  ],
-
-  "dns": {
-    "servers": [
-      "https+local://1.1.1.1/dns-query",
-      "8.8.8.8",
-      "https://dns.google/dns-query"
-    ],
-    "queryStrategy": "UseIPv4"
-  },
-
-  "routing": {
-    "domainStrategy": "AsIs",
-    "rules": [
-      {
-        "type": "field",
-        "ip": ["geoip:private"],
-        "outboundTag": "blocked"
-      },
-      {
-        "type": "field",
-        "domain": ["geosite:category-ads-all"],
-        "outboundTag": "blocked"
-      }
-    ]
-  }
-      }
+  ]
+}
