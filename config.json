@@ -2,11 +2,11 @@
   "inbounds": [
     {
       "port": 8080,
-      "protocol": "vless",
+      "protocol": "trojan",
       "settings": {
         "clients": [
           {
-            "id": "b1bf281d-5742-4778-ac48-7d89635b2165",
+            "password": "t.me/goldenhamzanet",
             "level": 0
           }
         ],
