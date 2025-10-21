@@ -15,7 +15,7 @@
       "streamSettings": {
         "network": "grpc",
         "grpcSettings": {
-          "serviceName": "n4-grpc"
+          "serviceName": "hamza-grpc"
         }
       }
     }
