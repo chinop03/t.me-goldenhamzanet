@@ -15,7 +15,7 @@
       "streamSettings": {
         "network": "grpc",
         "grpcSettings": {
-          "serviceName": "goden-grpc"
+          "serviceName": "n4-grpc"
         }
       }
     }
